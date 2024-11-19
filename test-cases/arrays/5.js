@@ -2,23 +2,20 @@ const FIELD_NAME = "name";
 
 const handler = (req, res) => {
   let name = req.query[FIELD_NAME];
-  let o1 = name;
-  let o2 = name.concat("abc");
-  let o3 = "anc";
+  let array = new Array(10);
 
-  res.write(`${o1}\n`); // BAD
-  res.write(`${o2}\n`); // BAD
-  res.write(`${o3}\n`); // OK
+  array[0] = name;
+  array[0] = "abc";
 
-  res.end();
+  res.send(array[0]); // OK
 };
 
 const getDescription = () => {
-  return "simple aliasing with casts";
+  return "strong updates to array elements";
 };
 
 const getVulnerabilityCount = () => {
-  return 2;
+  return 0;
 };
 
 module.exports = {

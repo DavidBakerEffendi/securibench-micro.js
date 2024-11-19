@@ -1,19 +1,19 @@
 const FIELD_NAME = "name";
 
 const handler = (req, res) => {
-  let name = req.query[FIELD_NAME];
-  let str = "abc";
-  name = str;
+  let s1 = req.query[FIELD_NAME];
+  let array = new Array(10);
+  array[0] = s1;
 
-  res.send(str); // OK
+  res.send(array[0]); // BAD
 };
 
 const getDescription = () => {
-  return "simple aliasing false positive";
+  return "a simple array test";
 };
 
 const getVulnerabilityCount = () => {
-  return 0;
+  return 1;
 };
 
 module.exports = {

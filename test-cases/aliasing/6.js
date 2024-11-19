@@ -90,6 +90,7 @@ const handler = (req, res) => {
   res.write(`${o1}\n`); // BAD
   res.write(`${o2}\n`); // BAD
   res.write(`${o3}\n`); // BAD
+  res.write(`${o4}\n`); // BAD
   res.write(`${o32}\n`); // BAD
   res.write(`${o37}\n`); // BAD
   res.write(`${o40}\n`); // BAD

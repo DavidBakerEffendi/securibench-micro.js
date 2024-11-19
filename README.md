@@ -11,4 +11,4 @@ npm install
 npm start
 ```
 
-NB: This repository attempts to recreate the original in JavaScript exactly, and this includes the test outcomes, whether one could argue that they are true vulnerabilities or not. We value consistency between the two repositories.
+_NB_: This repository attempts to recreate the original in JavaScript exactly, and this includes the test outcomes, whether one could argue that they are true vulnerabilities or not. We value consistency between the two repositories. However, some typos and incorrect vulnerability counts are fixed.
