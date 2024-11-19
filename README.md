@@ -1,4 +1,4 @@
-# Securibench Micro.js
+# SecuribenchMicro.js
 
 A [Securibench Micro](https://github.com/too4words/securibench-micro/tree/master) v1.08 inspired program analysis benchmark for server-side JavaScript. This uses [Express.js](https://expressjs.com) as the server-side framework.
 

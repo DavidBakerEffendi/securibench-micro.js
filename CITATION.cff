@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: >
   If you use this software, please cite it as below.
-title: "securibench-micro.js"
+title: "SecuribenchMicro.js"
 authors:
   - family-names: Baker Effendi
     given-names: Sedick David
