@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: >
+  If you use this software, please cite it as below.
+title: "securibench-micro.js"
+authors:
+  - family-names: Baker Effendi
+    given-names: Sedick David
+    name: Sedick David Baker Effendi
+    orcid: https://orcid.org/0000-0002-4942-626X
+date-released: 2024-11-19
+# version: 1.0.0
+repository-code: https://github.com/DavidBakerEffendi/securibench-micro.js
+keywords:
+  - Node.js
+  - JavaScript
+  - Security
+  - Benchmarks
+  - Micro Benchmarks
+  - Static Analysis
+  - Dynamic Analysis
+abstract: >
+  This repository is a JavaScript/Node.js adaptation of the Securibench Micro project,
+  designed for testing and analyzing security vulnerabilities in small code snippets.
+license: Apache 2.0
