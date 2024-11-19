@@ -1,18 +1,22 @@
 const { StringBuffer } = require("../../lib");
 
-const handler = (req, res) => {
-  let s1 = req.query["name"];
-  let s2 = s1.toUpperCase();
-  let buf = new StringBuffer(s2);
-  buf.append("abcdefgh");
-  buf.insert(3, "s");
-  let s3 = buf.toString();
+const FIELD_NAME = "name";
 
-  res.send(s3); // BAD
+const handler = (req, res) => {
+  let s1 = req.query[FIELD_NAME];
+  let o = s1 + ";";
+  let s2 = o.toString(); // Cast object to string (implicitly handled by JavaScript)
+
+  let buf = new StringBuffer(s2);
+  let o2 = buf;
+
+  let s3 = o2.toString();
+
+  res.send(s3);
 };
 
 const getDescription = () => {
-  return "complex test of derived strings involving a string buffer";
+  return "test casts more exhaustively";
 };
 
 const getVulnerabilityCount = () => {

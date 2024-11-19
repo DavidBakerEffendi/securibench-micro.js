@@ -11,4 +11,6 @@ npm install
 npm start
 ```
 
-_NB_: This repository attempts to recreate the original in JavaScript exactly, and this includes the test outcomes, whether one could argue that they are true vulnerabilities or not. We value consistency between the two repositories. However, some typos and incorrect vulnerability counts are fixed.
+_Disclaimer_: This repository attempts to recreate the original in JavaScript exactly, however, some typos and incorrect vulnerability counts are fixed. Notable changes:
+
+- Aliasing 3 is marked as non-vulnerable

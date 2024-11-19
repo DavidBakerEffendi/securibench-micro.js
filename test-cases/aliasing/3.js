@@ -7,7 +7,7 @@ const handler = (req, res) => {
   a[5] = name;
   name = str;
 
-  res.send(str); // BAD
+  res.send(str); // OK
 };
 
 const getDescription = () => {
@@ -15,7 +15,7 @@ const getDescription = () => {
 };
 
 const getVulnerabilityCount = () => {
-  return 1;
+  return 0;
 };
 
 module.exports = {
