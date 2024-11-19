@@ -8,8 +8,8 @@ const handler = (req, res) => {
   array1[0] = s1;
   array2[0] = "abc";
 
-  res.write(array1[0]); // BAD
-  res.write(array2[1]); // OK
+  res.write(`${array1[0]}\n`); // BAD
+  res.write(`${array2[1]}\n`); // OK
 
   res.end();
 };

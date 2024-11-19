@@ -4,8 +4,8 @@ const handler = (req, res) => {
   let name = req.query[FIELD_NAME];
   let array = [name, "abc"];
 
-  res.write(array[0]); // BAD
-  res.write(array[1]); // OK
+  res.write(`${array[0]}\n`); // BAD
+  res.write(`${array[1]}\n`); // OK
 
   res.end();
 };

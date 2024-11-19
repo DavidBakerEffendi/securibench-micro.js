@@ -3,8 +3,8 @@ const handler = (req, res) => {
   let array = Array.from({ length: 3 }, () => Array(5).fill(null));
   array[0] = [name, "abc"];
 
-  res.write(array[0][0]); // BAD
-  res.write(array[0][2]); // OK
+  res.write(`${array[0][0]}\n`); // BAD
+  res.write(`${array[0][2]}\n`); // OK
 
   res.end();
 };

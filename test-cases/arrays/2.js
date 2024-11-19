@@ -5,9 +5,9 @@ const handler = (req, res) => {
   let array = new Array(10);
   array[0] = s1;
 
-  res.write(array[0]); // BAD
-  res.write(array[1]); // OK
-  res.write(array[2]); // OK
+  res.write(`${array[0]}`); // BAD
+  res.write(`${array[1]}`); // OK
+  res.write(`${array[2]}`); // OK
 
   res.end();
 };
