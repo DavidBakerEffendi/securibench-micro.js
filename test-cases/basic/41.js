@@ -1,6 +1,6 @@
 const handler = (req, res) => {
   const s = req.app.locals.config["name"];
-  res.send(s);
+  res.send(s); // BAD
 };
 
 const getDescription = () => {
