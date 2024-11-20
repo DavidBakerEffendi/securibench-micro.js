@@ -45,6 +45,23 @@ class MockDatabase {
     });
   }
 
+  execute(sql) {
+    return this.query(sql);
+  }
+
+  executeUpdate(sql, params) {
+    return new Promise((resolve, reject) => {
+      this.db.run(sql, params, (err, rows) => {
+        if (err) reject(err);
+        else resolve(rows);
+      });
+    });
+  }
+
+  executeQuery(sql) {
+    return this.execute(sql);
+  }
+
   close() {
     return new Promise((resolve, reject) => {
       if (this.db !== null) {
