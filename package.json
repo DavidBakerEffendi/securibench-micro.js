@@ -1,16 +1,17 @@
 {
   "name": "securibench-micro-js",
   "version": "1.0.0",
-  "description": "Converted Securibench Micro test cases in Node.js/Express",
+  "description": "Transpiled Securibench Micro test cases to a Node.js/Express equivalent",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "prepare": "husky install"
   },
-  "author": "Your Name",
+  "author": "David Baker Effendi",
   "license": "Apache 2.0",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "husky": "^9.1.7",

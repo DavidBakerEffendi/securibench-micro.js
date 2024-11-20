@@ -2,10 +2,14 @@ const FIELD_NAME = "name";
 
 const handler = (req, res) => {
   let s = req.query[FIELD_NAME];
-  let w = new Widget();
-  w.setContents(s);
+  let w1 = new Widget();
+  w1.setContents(s);
 
-  res.send(w.getContents()); // BAD
+  let w2 = new Widget();
+  w2.setContents("abc");
+
+  res.send(w1.getContents()); // BAD
+  res.send(w2.getContents()); // OK
 };
 
 class Widget {
