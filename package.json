@@ -10,7 +10,9 @@
   "author": "David Baker Effendi",
   "license": "Apache 2.0",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
