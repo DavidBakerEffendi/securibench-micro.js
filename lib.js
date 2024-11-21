@@ -86,8 +86,44 @@ class Character {
   }
 }
 
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+
+  addLast(value) {
+    const newNode = { value, next: null };
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+  }
+
+  getLast() {
+    if (!this.tail) {
+      console.error("The list is empty.");
+      return null;
+    } else {
+      return this.tail.value;
+    }
+  }
+
+  *iterator() {
+    let current = this.head;
+    while (current) {
+      yield current.value;
+      current = current.next;
+    }
+  }
+}
+
 module.exports = {
   StringBuffer,
   MockDatabase,
   Character,
+  LinkedList,
 };
