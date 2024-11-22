@@ -134,6 +134,10 @@ class LinkedList extends Collection {
     }
   }
 
+  add(value) {
+    this.addLast(value);
+  }
+
   getLast() {
     if (!this.tail) {
       return null;
