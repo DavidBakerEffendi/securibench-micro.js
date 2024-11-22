@@ -1,5 +1,6 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const session = require("express-session");
 const fs = require("fs");
 const path = require("path");
 const multer = require("multer");
@@ -7,6 +8,15 @@ const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
 const app = express();
 app.use(cookieParser());
+app.use(
+  session({
+    secret: "secret-key",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false },
+  }),
+);
+
 const PORT = 3000;
 
 // Example config object (similar to the servlet context's init parameters)
