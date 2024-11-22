@@ -11,6 +11,7 @@ npm install
 npm start
 ```
 
-_Disclaimer_: This repository attempts to recreate the original in JavaScript exactly, however, some typos and incorrect vulnerability counts are fixed. Notable changes:
+_Disclaimer_: This repository attempts to recreate the original in JavaScript exactly, however, some typos and incorrect vulnerability counts are fixed and verifiable by running the app. Notable changes:
 
 - Aliasing 3 is marked as non-vulnerable
+- Collections 8 is marked as non-vulnerable

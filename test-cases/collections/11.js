@@ -1,24 +1,19 @@
 const { LinkedList } = require("../../lib");
+const Collections11b = require("./lib/11b");
 
 const FIELD_NAME = "name";
 
 const handler = (req, res) => {
-  const name = req.query[FIELD_NAME];
+  const s1 = req.query[FIELD_NAME];
+  const c1 = new LinkedList();
+  c1.addLast(s1);
 
-  const ll = new LinkedList();
-  ll.addLast(name);
-
-  const iter = ll.iterator();
-  while (iter.hasNext()) {
-    const o = iter.next();
-    res.write(o + "\n"); // BAD
-  }
-
-  res.end();
+  const c11b = new Collections11b();
+  c11b.foo(c1, res);
 };
 
 const getDescription = () => {
-  return "test of iterators";
+  return "interprocedural collection passing";
 };
 
 const getVulnerabilityCount = () => {

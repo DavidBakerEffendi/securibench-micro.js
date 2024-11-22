@@ -1,12 +1,11 @@
-const { LinkedList } = require("../../lib");
+const { ArrayList } = require("../../lib");
 
 const FIELD_NAME = "name";
 
 const handler = (req, res) => {
   const name = req.query[FIELD_NAME];
-
-  const ll = new LinkedList();
-  ll.addLast(name);
+  const ll = new ArrayList();
+  ll.add(name);
 
   const iter = ll.iterator();
   while (iter.hasNext()) {

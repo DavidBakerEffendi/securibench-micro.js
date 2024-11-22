@@ -1,24 +1,20 @@
-const { LinkedList } = require("../../lib");
-
 const FIELD_NAME = "name";
 
 const handler = (req, res) => {
   const name = req.query[FIELD_NAME];
+  const m = new Map();
+  m.set("a", name);
+  const s1 = m.get("b");
+  const s2 = m.get("a");
 
-  const ll = new LinkedList();
-  ll.addLast(name);
-
-  const iter = ll.iterator();
-  while (iter.hasNext()) {
-    const o = iter.next();
-    res.write(o + "\n"); // BAD
-  }
+  res.write(s1 + "\n"); // OK
+  res.write(s2 + "\n"); // BAD
 
   res.end();
 };
 
 const getDescription = () => {
-  return "test of iterators";
+  return "test of maps";
 };
 
 const getVulnerabilityCount = () => {

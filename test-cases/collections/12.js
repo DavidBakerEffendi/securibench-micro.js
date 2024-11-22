@@ -3,22 +3,15 @@ const { LinkedList } = require("../../lib");
 const FIELD_NAME = "name";
 
 const handler = (req, res) => {
-  const name = req.query[FIELD_NAME];
-
-  const ll = new LinkedList();
-  ll.addLast(name);
-
-  const iter = ll.iterator();
-  while (iter.hasNext()) {
-    const o = iter.next();
-    res.write(o + "\n"); // BAD
-  }
-
-  res.end();
+  const s1 = req.query[FIELD_NAME];
+  const c1 = new LinkedList();
+  c1.addLast(s1);
+  const array = c1.toArray();
+  res.send(array[0]); // BAD
 };
 
 const getDescription = () => {
-  return "test of iterators";
+  return "collection copying through an array";
 };
 
 const getVulnerabilityCount = () => {
