@@ -31,6 +31,7 @@ app.locals.config = config;
 
 const loadTestCases = (app, baseDir) => {
   const testCasesDir = path.join(__dirname, baseDir);
+  let categoryMap = new Map();
 
   fs.readdirSync(testCasesDir, { withFileTypes: true }).forEach((entry) => {
     if (entry.isDirectory()) {
@@ -43,6 +44,11 @@ const loadTestCases = (app, baseDir) => {
           const category = subDir
             .replace(/\\/g, "/")
             .replace(/test-cases\//, "");
+          if (categoryMap.has(category)) {
+            categoryMap.set(category, categoryMap.get(category) + 1);
+          } else {
+            categoryMap.set(category, 1);
+          }
           const testNumber = path.basename(file, ".js");
           const routePath = `/${category}/${testNumber}`;
           const testCase = require(path.join(__dirname, testCasePath));
@@ -52,12 +58,16 @@ const loadTestCases = (app, baseDir) => {
           } else {
             app.get(routePath, testCase.handler);
           }
-
-          console.log(`Loaded test case: ${routePath}`);
         }
       });
     }
   });
+
+  console.log("Loaded Endpoints:\n");
+  categoryMap.forEach((v, k) => {
+    console.log(`\t/${k}/[1-${v}]`);
+  });
+  console.log();
 };
 
 // Load test cases into the Express app
