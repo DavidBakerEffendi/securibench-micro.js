@@ -11,6 +11,8 @@ npm install
 npm start
 ```
 
+`lib.js` should be considered "external" as any other library found in `node_modules`. It is meant to mock many of the Java built-in classes that are tested against in the original Securibench Micro benchmark.
+
 _Disclaimer_: This repository attempts to recreate the original in JavaScript exactly, however, some typos and incorrect vulnerability counts are fixed and verifiable by running the app. Notable changes:
 
 - Aliasing 3 is marked as non-vulnerable
