@@ -1,4 +1,4 @@
-const { Arrays, LinkedList } = require("../../lib");
+const { LinkedList } = require("../../lib");
 
 const FIELD_NAME = "name";
 
