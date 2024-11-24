@@ -38,7 +38,7 @@ const handler = (req, res) => {
             if (b[0]) {
               if (b[0]) {
               }
-              writer.println(name); // BAD
+              writer.write(name); // BAD
             } else {
             }
           } else {
