@@ -1,11 +1,9 @@
-const { StringBuffer } = require("../../lib");
-
 const handler = (req, res) => {
   let s1 = req.query["name"];
   let s2 = s1.toUpperCase();
-  let buf = new StringBuffer(s2);
-  buf.append("abcdefgh");
-  buf.insert(3, "s");
+  let buf = s2.toString();
+  buf += "abcdefgh";
+  buf = buf.slice(0, 3) + "s" + buf.slice(3);
   let s3 = buf.toString();
 
   res.send(s3); // BAD

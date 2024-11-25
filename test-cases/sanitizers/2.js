@@ -1,26 +1,26 @@
-const { StringBuffer, Character } = require("../../lib");
+const { Character } = require("../../lib");
 
 const FIELD_NAME = "name";
 
 const clean = (name) => {
-  let buf = new StringBuffer();
+  let buf = "";
   for (let i = 0; i < name.length; i++) {
     let ch = name[i];
     switch (ch) {
       case "<":
-        buf.append("&lt;");
+        buf += "&lt;";
         break;
       case ">":
-        buf.append("&gt;");
+        buf += "&gt;";
         break;
       case "&":
-        buf.append("&amp;");
+        buf += "&amp;";
         break;
       default:
         if (Character.isLetter(ch) || Character.isDigit(ch) || ch == "_") {
-          buf.append(ch);
+          buf += ch;
         } else {
-          buf.append("?");
+          buf += "?";
         }
     }
   }

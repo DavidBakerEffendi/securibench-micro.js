@@ -1,7 +1,7 @@
 const FIELD_NAME = "name";
 
 const handler = (req, res) => {
-  const buf = ["abc"]; // Using an array to simulate StringBuffer behavior
+  const buf = ["abc"];
   foo(buf, buf, res, req);
 };
 

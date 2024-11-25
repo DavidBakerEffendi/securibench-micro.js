@@ -19,8 +19,7 @@ npm start
 | -------------- | ----- |
 | aliasing       | 6     |
 | arrays         | 10    |
-| basic          | 42    |
-| collections    | 14    |
+| basic          | 40    |
 | datastructures | 6     |
 | factories      | 3     |
 | inter          | 14    |
@@ -30,10 +29,8 @@ npm start
 | session        | 3     |
 | strong_updates | 5     |
 
-_Disclaimer_: This repository attempts to recreate the original in JavaScript exactly, however, some typos and incorrect vulnerability counts are fixed and verifiable by running the app. Notable changes:
+_Disclaimer_: This repository attempts to recreate the original in JavaScript in the most idiomatic way possible, however, some tests do not have comparable versions, e.g., `collections`. Other tests may simplify to effectively the same as others, thus these duplicates are also omitted. Some typos and incorrect vulnerability counts are fixed and verifiable by running the app. Notable changes:
 
 - Aliasing 3 is marked as non-vulnerable
 - Basic 24 was missing its "BAD" comment
-- Collections 8 is marked as non-vulnerable
-- Collections 13 lines 52/54 tags are swapped in the Java version
 - Datastructures1 is marked as vulnerable

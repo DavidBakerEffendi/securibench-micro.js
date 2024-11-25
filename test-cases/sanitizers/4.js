@@ -1,17 +1,15 @@
-const { StringBuffer } = require("../../lib");
-
 const FIELD_NAME = "name";
 
 const clean = (name) => {
-  let buf = new StringBuffer();
+  let buf = "";
   for (let i = 0; i < name.length; i++) {
     let ch = name[i];
     switch (ch) {
       case "&":
-        buf.append("&amp;");
+        buf += "&amp;";
         break;
       default:
-        buf.append(ch);
+        buf += ch;
         break;
     }
   }

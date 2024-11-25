@@ -1,5 +1,3 @@
-const { StringBuffer } = require("../../lib");
-
 const FIELD_NAME = "name";
 
 const handler = (req, res) => {
@@ -7,7 +5,7 @@ const handler = (req, res) => {
   let o = s1 + ";";
   let s2 = o.toString(); // Cast object to string (implicitly handled by JavaScript)
 
-  let buf = new StringBuffer(s2);
+  let buf = s2.toString();
   let o2 = buf;
 
   let s3 = o2.toString();

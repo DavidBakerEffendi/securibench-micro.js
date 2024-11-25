@@ -8,13 +8,9 @@ const handler = async (req, res) => {
 
   try {
     await db.initialize();
-    await db.executeUpdate(`SELECT * FROM Users WHERE name='${name}'`); // BAD
-    await db.executeUpdate(`SELECT * FROM Users WHERE name='${name}'`, 0); // BAD
-    await db.executeUpdate(
-      `SELECT * FROM Users WHERE name='${name}'`,
-      new Array(0),
-    ); // BAD
-    await db.executeQuery(`SELECT * FROM Users WHERE name='${name}'`); // BAD
+    await db.query(`SELECT * FROM Users WHERE name='${name}'`); // BAD
+    await db.query(`SELECT * FROM Users WHERE name='${name}'`, 0); // BAD
+    await db.query(`SELECT * FROM Users WHERE name='${name}'`, new Array(0)); // BAD
     res.status(200);
     res.end();
   } catch (err) {
